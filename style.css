@@ -1,0 +1,195 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+
+.indicators {
+    display: flex;
+    position: fixed;
+   top: 94%;
+   left: 43%;
+    transform: translateY(-50%);
+    z-index: 100;
+}
+
+.dot {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%; /* Make the dots circular */
+    margin-bottom: 10px;
+    cursor: pointer;
+    margin: 0px 5px;
+}
+
+.dot.active {
+    background-color: yellow; /* Adjust active dot color */
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+    background-color: #232f3e;
+}
+
+/* Main Sections */
+.uxbox-main, .nasabox-main, .blockchain-main, .appstore-main, .furniture-main, .Asia-main, .footer-main {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    overflow: hidden;
+}
+
+/* Section Box 1 */
+.ux-box-1, .nasabox-1, .blockbox-1, .appstore-box-1, .furniturebox-1, .Asia-box-1, .footer-box-1 {
+    display: flex;
+    flex-direction: column;
+    width: 650px; /* Adjusted width to be consistent */
+}
+
+/* Section Box 2 */
+.ux-box-2, .nasabox-2, .blocbox-2, .appstore-box-2, .furniture-box2, .Asia-box-2, .footer-box-2 {
+    display: flex;
+    flex-direction: column;
+    width: calc(100vw - 650px); /* Adjusted width to fill remaining space */
+    height: 100vh; /* Ensure it takes full viewport height */
+}
+
+/* Individual Section Styling */
+.ux-box-1 {
+    background-color: #232f3e;
+}
+
+.nasabox-1 {
+    background-color: rgb(36, 2, 59);
+}
+
+.blockbox-1 {
+    background-color: rgb(13, 105, 190); /* Light Blue */
+}
+
+.appstore-box-1 {
+    background-color: rgb(117, 12, 214); /* Dark Grey */
+}
+
+.furniturebox-1 {
+    background-color: rgb(17, 17, 114); /* Green, adjust as per your design */
+}
+
+.Asia-box-1 {
+    background-color: rgb(2, 71, 51); /* Orange, adjust as per your design */
+}
+
+.ux-box-2 {
+    background-color: #060e15;
+}
+
+.nasabox-2 {
+    background-color: rgb(51, 24, 83);
+}
+
+.blocbox-2 {
+    background-color: #00008B; /* Dark Blue */
+}
+
+.appstore-box-2 {
+    background-color: grey; /* Dark Grey */
+}
+
+.furniture-box2 {
+    background-color: #FF5733; /* Orange, adjust as per your design */
+    justify-content: center;
+    align-items: center;
+}
+
+.Asia-box-2 {
+    background-color: rgb(11, 216, 114); /* Orange, adjust as per your design */
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-box-1 {
+    background-color: #232f3e; /* Adjust background color for footer-box-1 */
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer-box-2 {
+    background-color: #060e15; /* Adjust background color for footer-box-2 */
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Shared Styling */
+.ux-content, .nasa-content, .block-content-1, .appstore-content-1, .furniture-content-1, .Asia-content-1,
+.footer-content-1, .footer-content-2 {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 150px;
+}
+
+.ux-second-content, .nasa-second-content, .block-content-2, .appstore-content-2, .furniture-content-2, .Asia-content-2 {
+    margin: 100px 50px;
+}
+
+.view, .view-second, .view-third, .view-fourth, .view-fifth, .view-sixth, .view-seventh {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.furniture-box2 img, .Asia-box-2 img, .footer-box-2 img {
+    max-height: 100%; /* Ensure the image does not exceed container height */
+}
+
+
+/* Example media query for Android phones */
+@media only screen and (max-width: 600px) {
+    .container {
+        flex-direction: column; /* Adjust to stack sections vertically */
+    }
+
+    /* Adjust section widths for smaller screens */
+    .uxbox-main, .nasabox-main, .blockchain-main, .appstore-main, .furniture-main, .Asia-main, .footer-main {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .ux-box-1, .nasabox-1, .blockbox-1, .appstore-box-1, .furniturebox-1, .Asia-box-1, .footer-box-1 {
+        width: 100%;
+    }
+
+    .ux-box-2, .nasabox-2, .blocbox-2, .appstore-box-2, .furniture-box2, .Asia-box-2, .footer-box-2 {
+        width: 100%;
+    }
+
+    /* Adjust margins, paddings, and font sizes for better readability on smaller screens */
+    .ux-content, .nasa-content, .block-content-1, .appstore-content-1, .furniture-content-1, .Asia-content-1, .footer-content-1, .footer-content-2 {
+        margin: 20px;
+    }
+
+    .ux-second-content, .nasa-second-content, .block-content-2, .appstore-content-2, .furniture-content-2, .Asia-content-2 {
+        margin: 20px;
+    }
+ 
+    .indicators {
+        display: flex;
+        position: fixed;
+       top: 94%;
+       left: 32%;
+        transform: translateY(-50%);
+        z-index: 100;
+    }
+    
+
+}
